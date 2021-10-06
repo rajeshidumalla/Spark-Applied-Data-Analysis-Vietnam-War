@@ -21,48 +21,6 @@ os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
     [?25hCollecting py4j==0.10.9
       Downloading py4j-0.10.9-py2.py3-none-any.whl (198 kB)
     [K     |████████████████████████████████| 198 kB 56.9 MB/s 
-    [?25hBuilding wheels for collected packages: pyspark
-      Building wheel for pyspark (setup.py) ... [?25l[?25hdone
-      Created wheel for pyspark: filename=pyspark-3.1.2-py2.py3-none-any.whl size=212880768 sha256=e18b7a6abf61d76a3311b9a5a0b0760dfb3737d8bf0ca83fe5d31f823261a94f
-      Stored in directory: /root/.cache/pip/wheels/a5/0a/c1/9561f6fecb759579a7d863dcd846daaa95f598744e71b02c77
-    Successfully built pyspark
-    Installing collected packages: py4j, pyspark
-    Successfully installed py4j-0.10.9 pyspark-3.1.2
-    The following additional packages will be installed:
-      openjdk-8-jre-headless
-    Suggested packages:
-      openjdk-8-demo openjdk-8-source libnss-mdns fonts-dejavu-extra
-      fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
-      fonts-wqy-zenhei fonts-indic
-    The following NEW packages will be installed:
-      openjdk-8-jdk-headless openjdk-8-jre-headless
-    0 upgraded, 2 newly installed, 0 to remove and 37 not upgraded.
-    Need to get 36.5 MB of archives.
-    After this operation, 143 MB of additional disk space will be used.
-    Selecting previously unselected package openjdk-8-jre-headless:amd64.
-    (Reading database ... 155047 files and directories currently installed.)
-    Preparing to unpack .../openjdk-8-jre-headless_8u292-b10-0ubuntu1~18.04_amd64.deb ...
-    Unpacking openjdk-8-jre-headless:amd64 (8u292-b10-0ubuntu1~18.04) ...
-    Selecting previously unselected package openjdk-8-jdk-headless:amd64.
-    Preparing to unpack .../openjdk-8-jdk-headless_8u292-b10-0ubuntu1~18.04_amd64.deb ...
-    Unpacking openjdk-8-jdk-headless:amd64 (8u292-b10-0ubuntu1~18.04) ...
-    Setting up openjdk-8-jre-headless:amd64 (8u292-b10-0ubuntu1~18.04) ...
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/orbd to provide /usr/bin/orbd (orbd) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/servertool to provide /usr/bin/servertool (servertool) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/tnameserv to provide /usr/bin/tnameserv (tnameserv) in auto mode
-    Setting up openjdk-8-jdk-headless:amd64 (8u292-b10-0ubuntu1~18.04) ...
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/idlj to provide /usr/bin/idlj (idlj) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/wsimport to provide /usr/bin/wsimport (wsimport) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/jsadebugd to provide /usr/bin/jsadebugd (jsadebugd) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/native2ascii to provide /usr/bin/native2ascii (native2ascii) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/javah to provide /usr/bin/javah (javah) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/hsdb to provide /usr/bin/hsdb (hsdb) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/clhsdb to provide /usr/bin/clhsdb (clhsdb) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/extcheck to provide /usr/bin/extcheck (extcheck) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/schemagen to provide /usr/bin/schemagen (schemagen) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/xjc to provide /usr/bin/xjc (xjc) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/jhat to provide /usr/bin/jhat (jhat) in auto mode
-    update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/bin/wsgen to provide /usr/bin/wsgen (wsgen) in auto mode
 
 
 Lets authenticate a Google Drive client to download the file we will be processing on Spark job.
@@ -127,31 +85,17 @@ We can easily check the current version and get the link of the web interface. I
 ```python
 spark
 ```
-
-
-
-
-
-    <div>
-        <p><b>SparkSession - in-memory</b></p>
-
-<div>
-    <p><b>SparkContext</b></p>
-
-    <p><a href="http://71b1d1e4f414:4050">Spark UI</a></p>
-
-    <dl>
-      <dt>Version</dt>
-        <dd><code>v3.1.2</code></dd>
-      <dt>Master</dt>
-        <dd><code>local[*]</code></dd>
-      <dt>AppName</dt>
-        <dd><code>pyspark-shell</code></dd>
-    </dl>
-</div>
-
-    </div>
-
+```python
+SparkSession - in-memory
+SparkContext
+Spark UI
+Version
+v3.1.2
+Master
+local[*]
+AppName
+pyspark-shell
+```
 
 
 
@@ -389,20 +333,6 @@ missions_count_pd.head()
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
