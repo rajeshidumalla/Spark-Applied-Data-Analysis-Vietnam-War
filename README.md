@@ -1,6 +1,6 @@
 # Spark | Applied Data Analysis | Vietnam War
 
-
+Thanks for visiting my GitHub page. This project is about applying data analysis skills using Spark on Vientam War. Please follow interactive instructions to learn more about this project in this README.md file.
 
 ### Setup
 
